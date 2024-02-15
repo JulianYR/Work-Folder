@@ -5,28 +5,49 @@ const py = document.getElementById('py').addEventListener('click', seeDescriptio
 const git = document.getElementById('git').addEventListener('click', seeDescriptionGit)
 const github = document.getElementById('github').addEventListener('click', seeDescriptionGitHub)
 
+const htmlContainer = document.querySelector('.htmlContainer')
+const htmlDescription = document.querySelector('.htmlDescription')
+const cssContainer = document.querySelector('.cssContainer')
+const cssDescription = document.querySelector('.cssDescription')
+const jsContainer = document.querySelector('.jsContainer')
+const jsDescription = document.querySelector('.jsDescription')
+const pyContainer = document.querySelector('.pyContainer')
+const pyDescription = document.querySelector('.pyDescription')
+const gitContainer = document.querySelector('.gitContainer')
+const gitDescription = document.querySelector('.jsDescription')
+const githubContainer = document.querySelector('.githubContainer')
+const githubDescription = document.querySelector('.githubContainer')
+
+let active = ''
+
 function seeDescriptionHtml(){
 
-    if (document.querySelector('.htmlContainer')){
-        const htmlDescription = document.querySelector('.htmlContainer')
-        htmlDescription.classList.remove('htmlContainer')
-        htmlDescription.classList.add('htmlDescription')
+    if (active !== ''){
+        document.querySelector('.htmlContainer')
     }
-    else if (document.querySelector('.htmlDescription')){
-        const htmlDescription = document.querySelector('.htmlDescription')
-        htmlDescription.classList.remove('htmlDescription')
-        htmlDescription.classList.add('htmlContainer')
+    else {
+        if (htmlContainer){
+            const htmlDescription = document.querySelector('.htmlContainer')
+            htmlDescription.classList.remove('htmlContainer')
+            htmlDescription.classList.add('htmlDescription')
+        }
+        else if (htmlDescription){
+            const htmlDescription = document.querySelector('.htmlDescription')
+            htmlDescription.classList.remove('htmlDescription')
+            htmlDescription.classList.add('htmlContainer')
+        }
+        active = 'html'
     }
 
 }
 function seeDescriptionCss(){
 
-    if (document.querySelector('.cssContainer')){
+    if (cssContainer){
         const htmlDescription = document.querySelector('.cssContainer')
         htmlDescription.classList.remove('cssContainer')
         htmlDescription.classList.add('cssDescription')
     }
-    else if (document.querySelector('.cssDescription')){
+    else if (cssDescription){
         const htmlDescription = document.querySelector('.cssDescription')
         htmlDescription.classList.remove('cssDescription')
         htmlDescription.classList.add('cssContainer')
@@ -77,7 +98,7 @@ function seeDescriptionGit(){
 }
 function seeDescriptionGitHub(){
 
-    if (document.querySelector('.githubContainer')){
+    if (githubContainer){
         const htmlDescription = document.querySelector('.githubContainer')
         htmlDescription.classList.remove('githubContainer')
         htmlDescription.classList.add('githubDescription')
