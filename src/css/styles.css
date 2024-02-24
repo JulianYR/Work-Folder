@@ -5,6 +5,11 @@
     - 35A29F
 */
 
+* {
+    font-family: 'Open Sans', sans-serif;
+    color: #476072;
+}
+
 .body1 {
     background: #000;
     transition: 0.7s;
@@ -445,13 +450,67 @@
 
 .form .inputBox {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.form .inputBox .divInputField {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.form .textareaField .item {
+    resize: none;
+    min-width: 400px;
+    max-width: 400px;
+    min-height: 200px;
+    max-height: 200px;
+    font-size: 18px;
 }
 
+/* .inputBox .inputField {
+    width: 48.5%;
+} */
+
 .field .item {
-    width: 100%;
+    width: 170px;
     padding: 18px;
     background: transparent;
-    border:  4px solid #35A29F;
+    border:  2px solid #35A29F;
+    box-shadow: 0 0 2px #35A29F,
+                0 0 4px #35A29F,
+                0 0 6px #35A29F;
+    border-radius: 6px;
     outline: none;
+    color: #476072;
+    font-size: 14px;
+    margin: 10px;
+}
+.field .item::placeholder {
+    color: #476072;
+}
+
+.sendButton {
+    color: #35A29F;
+    background: transparent;
+    border: #35A29F 2px solid;
+    box-shadow: 0 0 2px #35A29F,
+                0 0 4px #35A29F,
+                0 0 6px #35A29F,
+                0 0 8px #35A29F,
+                0 0 10px #35A29F;
+    width: 140px;
+    height: 50px;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: 0.4s;
+}
+.sendButton:hover {
+    box-shadow: 0 0 3px #35A29F,
+                0 0 5px #35A29F,
+                0 0 7px #35A29F,
+                0 0 7px #35A29F,
+                0 0 11px #35A29F;
+    transition: 0.3s;
+    cursor: pointer;
 }

@@ -248,15 +248,18 @@
                 <form action="#" data-aos="zoom-in" class="form">
 
                     <div class="inputBox">
-                        <div class="inputField field">
+                        <div class="divInputField">
+                            <div class="inputField field">
 
-                            <input placeholder="Full Name" type="text" name="name" id="nameInput" class="item" autocomplete="off">
-
-                        </div>
-                        <div class="inputField field">
-
-                            <input placeholder="Email Address" type="email" name="email" id="emailInput" class="item" autocomplete="off">
-
+                                <input placeholder="Full Name" type="text" name="name" id="nameInput" class="item" autocomplete="off">
+                                <div class="errorTxt"></div>
+    
+                            </div>
+                            <div class="inputField field">
+    
+                                <input placeholder="Email Address" type="email" name="email" id="emailInput" class="item" autocomplete="off">
+    
+                            </div>
                         </div>
                         <div class="textareaField field">
 
@@ -265,7 +268,7 @@
                         </div>
                     </div>
 
-                    <button type="submit">Send Message</button>
+                    <button type="submit" class="sendButton">Send Message</button>
 
                     <!-- <h2 class="name">Name</h2>
                     <input type="text" name="name" id="nameInput" required>

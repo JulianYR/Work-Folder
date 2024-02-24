@@ -23,34 +23,72 @@ let active = ''
 function seeDescriptionHtml(){
 
     if (active !== ''){
-        document.querySelector('.htmlContainer')
+        if (active == 'css'){
+            htmlDescription.classList.remove('htmlDescription')
+            htmlDescription.classList.add('htmlContainer')
+            cssContainer.classList.remove('cssContainer')
+            cssContainer.classList.remove('cssDescription')
+        }
+        else if (active == 'js'){
+            htmlDescription.classList.remove('htmlDescription')
+            htmlDescription.classList.add('htmlContainer')
+            cssContainer.classList.remove('cssContainer')
+            cssContainer.classList.remove('cssDescription')
+        }
+        else if (active == 'py'){
+            htmlDescription.classList.remove('htmlDescription')
+            htmlDescription.classList.add('htmlContainer')
+            cssContainer.classList.remove('cssContainer')
+            cssContainer.classList.remove('cssDescription')
+        }
+        else if (active == 'git'){
+            htmlDescription.classList.remove('htmlDescription')
+            htmlDescription.classList.add('htmlContainer')
+            cssContainer.classList.remove('cssContainer')
+            cssContainer.classList.remove('cssDescription')
+        }
+        else if (active == 'github'){
+            htmlDescription.classList.remove('htmlDescription')
+            htmlDescription.classList.add('htmlContainer')
+            cssContainer.classList.remove('cssContainer')
+            cssContainer.classList.remove('cssDescription')
+        }
     }
     else {
         if (htmlContainer){
-            const htmlDescription = document.querySelector('.htmlContainer')
             htmlDescription.classList.remove('htmlContainer')
             htmlDescription.classList.add('htmlDescription')
+            active = 'html'
         }
         else if (htmlDescription){
-            const htmlDescription = document.querySelector('.htmlDescription')
             htmlDescription.classList.remove('htmlDescription')
             htmlDescription.classList.add('htmlContainer')
         }
-        active = 'html'
     }
 
 }
 function seeDescriptionCss(){
 
-    if (cssContainer){
-        const htmlDescription = document.querySelector('.cssContainer')
-        htmlDescription.classList.remove('cssContainer')
-        htmlDescription.classList.add('cssDescription')
+    if (active !== ''){
+        if (active == 'html'){
+            htmlDescription.classList.remove('htmlDescription')
+            htmlDescription.classList.add('htmlContainer')
+            cssContainer.classList.remove('cssContainer')
+            cssContainer.classList.remove('cssDescription')
+        }
     }
-    else if (cssDescription){
-        const htmlDescription = document.querySelector('.cssDescription')
-        htmlDescription.classList.remove('cssDescription')
-        htmlDescription.classList.add('cssContainer')
+    else {
+        if (cssContainer){
+            const htmlDescription = document.querySelector('.cssContainer')
+            htmlDescription.classList.remove('cssContainer')
+            htmlDescription.classList.add('cssDescription')
+            active = 'css'
+        }
+        else if (cssDescription){
+            const htmlDescription = document.querySelector('.cssDescription')
+            htmlDescription.classList.remove('cssDescription')
+            htmlDescription.classList.add('cssContainer')
+        }
     }
 
 }
