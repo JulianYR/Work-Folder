@@ -468,10 +468,6 @@
     font-size: 18px;
 }
 
-/* .inputBox .inputField {
-    width: 48.5%;
-} */
-
 .field .item {
     width: 170px;
     padding: 18px;
@@ -513,4 +509,18 @@
                 0 0 11px #35A29F;
     transition: 0.3s;
     cursor: pointer;
+}
+
+.inFormNone {
+    display: none;
+}
+.inFormView {
+    font-size: 20px;
+    color: #831010;
+    transition: 0.3s all;
+}
+.inFormView:hover {
+    text-shadow: 0 0 5px #ac2222,
+                0 0 10px #ac2222,
+                0 0 15px #ac2222;
 }

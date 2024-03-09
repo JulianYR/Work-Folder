@@ -10,7 +10,6 @@
         <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
         <link rel="shortcut icon" href="./img/DevIcon.svg" type="image/x-icon">
         <link rel="stylesheet" href="./src/css/navAnimated.css">
-        <link rel="stylesheet" href="./src/css/technologies.css">
         <link rel="stylesheet" href="./src/css/styles.css">
         <title>Julián D. Pérez</title>
     </head>
@@ -245,7 +244,8 @@
 
                 <h2 class="titleContact" style="font-size: 32px;">Contact Me!</h2>
 
-                <form action="#" data-aos="zoom-in" class="form">
+                <form data-aos="zoom-in" class="form" action="https://formspree.io/f/mjvnorek"
+                method="POST">
 
                     <div class="inputBox">
                         <div class="divInputField">
@@ -268,18 +268,9 @@
                         </div>
                     </div>
 
-                    <button type="submit" class="sendButton">Send Message</button>
+                    <input type="submit" class="sendButton" value="Send" id="sendButton">
 
-                    <!-- <h2 class="name">Name</h2>
-                    <input type="text" name="name" id="nameInput" required>
-    
-                    <h2 class="email">Email</h2>
-                    <input type="email" name="email" id="emailInput">
-    
-                    <h2 class="description">Description</h2>
-                    <textarea name="description" id="asunt" cols="30" rows="10"></textarea>
-    
-                    <input type="button" value="Submit" class="submit"> -->
+                    <p class="inFormNone">Text fields cannot be empty.</p>
     
                 </form>
 
@@ -294,6 +285,7 @@
         <script src="./src/js/description.js"></script>
         <script src="./src/js/navAnimted.js"></script>
         <script src="./src/js/theme.js"></script>
+        <script src="./src/js/form.js"></script>
 
     </body>
 </html>
